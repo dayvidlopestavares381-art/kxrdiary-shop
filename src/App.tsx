@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react'
 import { BrowserRouter, Outlet, Route, Routes, useLocation } from 'react-router'
 import { Header } from './components/Header'
@@ -17,6 +18,7 @@ import Admin from './pages/Admin'
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
+
   useEffect(() => {
     if (hash) {
       document.getElementById(hash.slice(1))?.scrollIntoView()
@@ -24,6 +26,7 @@ function ScrollToTop() {
     }
     window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior })
   }, [pathname, hash])
+
   return null
 }
 
@@ -57,9 +60,10 @@ export default function App() {
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="admin" element={<Admin />} />
-        <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
   )
 }
+
