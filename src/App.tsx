@@ -13,6 +13,7 @@ import Guides from './pages/Guides'
 import Contact from './pages/Contact'
 import { Login, Signup } from './pages/Auth'
 import NotFound from './pages/NotFound'
+import Admin from './pages/Admin'
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
