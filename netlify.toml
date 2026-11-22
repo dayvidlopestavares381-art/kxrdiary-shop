@@ -1,0 +1,46 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Single-page app routes. Listed explicitly (instead of a /* catch-all) so a
+# Netlify Server can later own /api/* without being shadowed.
+[[redirects]]
+  from = "/finds"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/categories"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/categories/*"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/new-arrivals"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/product/*"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/coupons"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/guides"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/contact"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/login"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/signup"
+  to = "/index.html"
+  status = 200
