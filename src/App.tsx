@@ -56,7 +56,8 @@ export default function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="admin" element={<Admin />} />
+        <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
